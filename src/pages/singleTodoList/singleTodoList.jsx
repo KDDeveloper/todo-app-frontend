@@ -22,7 +22,7 @@ const SingleTodoList = () =>{
     
     const getSingleTodoList = async()=>{
         try {
-            const response = await axios.get(`http://localhost:3000/todolist/getOne/${todoid}`,CONFIG)
+            const response = await axios.get(`https://todo-notes-backend.herokuapp.com/todolist/getOne/${todoid}`,CONFIG)
             setOneTodoList([response.data])
         } catch (error) {
             window.alert(error.response.data.message);
@@ -34,7 +34,7 @@ const SingleTodoList = () =>{
         let completed = !status
         console.log(completed)
         try {
-            const response = await axios.patch(`http://localhost:3000/todolist/updatecompletestatus/${todoid}/${itemId}`,{
+            const response = await axios.patch(`https://todo-notes-backend.herokuapp.com/todolist/updatecompletestatus/${todoid}/${itemId}`,{
               completed 
             },CONFIG)
 
@@ -47,7 +47,7 @@ const SingleTodoList = () =>{
 
     const deleteOneTodoList = async(todoId)=>{
         try {
-         let response = await axios.delete(`http://localhost:3000/todolist/deleteOne/${todoId}`,CONFIG);
+         let response = await axios.delete(`https://todo-notes-backend.herokuapp.com/todolist/deleteOne/${todoId}`,CONFIG);
          console.log(response);
 
          if(response.status===200){
@@ -62,7 +62,7 @@ const SingleTodoList = () =>{
     const deleteOneTodoItem = async(item,itemId)=>{
         console.log(todoid,itemId,item)
         try {
-         let response = await axios.delete(`http://localhost:3000/todolist/deleteOneTodoItem/${todoid}/${itemId}`,CONFIG);
+         let response = await axios.delete(`https://todo-notes-backend.herokuapp.com/todolist/deleteOneTodoItem/${todoid}/${itemId}`,CONFIG);
          console.log(response);
 
 
