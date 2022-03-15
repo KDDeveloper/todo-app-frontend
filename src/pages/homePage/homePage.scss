@@ -1,0 +1,89 @@
+.homepage-container{
+    height: 100%;
+    display: block;
+    margin-top: 100px;
+
+    .add-button{
+        border-radius: 360px;
+        background-color: yellow;
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        right: 10vh;
+        bottom: 10vh;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        button{
+            height: 60px;
+            width: 60px;
+        }
+
+        svg{
+            color: #151516;
+        }
+    }
+
+    .all-todo-lists{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        color: #151516;
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .todo-list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            height: 300px;
+            width: 200px;
+            padding: 20px;
+            margin:10px;
+            background: rgb(255, 255, 95);
+
+            .todo-list-content{
+                height: 35%;
+                overflow: hidden;
+
+                .todo-list-item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+
+
+            .todo-list-buttons{
+               display: flex;
+               justify-content: space-around;
+            }
+
+
+
+            .first-icon{
+                background: #151516;
+                width: fit-content;
+                border-radius: 360px;
+
+                svg{
+                    color: rgb(255, 255, 95);
+                }
+            }
+
+            .second-icon{
+                background: #151516;
+                width: fit-content;
+                border-radius: 360px;
+
+                svg{
+                    color: rgb(255, 255, 95);
+                }
+            }
+            // align-items: center;
+        }
+    }
+}

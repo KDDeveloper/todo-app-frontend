@@ -1,0 +1,91 @@
+.single-todo-list-container{
+    display: flex;
+    justify-content: space-around;
+    color: #151516;
+    margin-top: 100px;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .todo-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        height: 600px;
+        width: 400px;
+        padding: 20px;
+        background: rgb(255, 255, 95);
+
+        .todo-list-top-buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10%;
+        }
+
+        
+        .todo-list-heading{
+            h4{
+
+                font-size: 24px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        .todo-list-content{
+            font-size: 20px;
+            height: fit-content;
+                border-bottom: 1px solid rgb(139, 139, 0);
+
+
+            .todo-list-item-edit{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid rgb(139, 139, 0);
+            }
+                
+            .todo-list-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                border-top: 1px solid rgb(139, 139, 0);
+            
+                width: 100%;
+            }
+        }
+
+
+        .todo-list-buttons{
+           display: flex;
+           justify-content: space-around;
+        }
+
+
+
+        .first-icon{
+            background: #151516;
+            width: fit-content;
+            border-radius: 360px;
+
+            svg{
+                color: rgb(255, 255, 95);
+            }
+        }
+
+        .second-icon{
+            background: #151516;
+            width: fit-content;
+            border-radius: 360px;
+
+            svg{
+                color: rgb(255, 255, 95);
+            }
+        }
+        // align-items: center;
+    }
+}
