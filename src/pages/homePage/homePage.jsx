@@ -23,7 +23,7 @@ const HomePage = () =>{
 
     const getAllTodos = async()=>{
        try {
-        let response = await axios.get(`https://todo-notes-backend.herokuapp.com/todolist/getAll/${id}`,CONFIG);
+        let response = await axios.get(`/todolist/getAll/${id}`,CONFIG);
         console.log(response)
         setAllTodos(response.data);
        } catch (error) {
@@ -36,7 +36,7 @@ const HomePage = () =>{
 
     const deleteOneTodo = async(todoId)=>{
        try {
-        let response = await axios.delete(`https://todo-notes-backend.herokuapp.com/todolist/deleteOne/${todoId}`);
+        let response = await axios.delete(`/todolist/deleteOne/${todoId}`);
         console.log(response)
        } catch (error) {
        }

@@ -54,7 +54,7 @@ const AddToTodoList = () =>{
        
         try {
             
-            const response = await axios.patch(`https://todo-notes-backend.herokuapp.com/todolist/add/${todoid}`,{
+            const response = await axios.patch(`/todolist/add/${todoid}`,{
                 todoItem
             },config)
 

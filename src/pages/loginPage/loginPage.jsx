@@ -19,7 +19,7 @@ function Login (props) {
     e.preventDefault();
     
    try{ 
-        const data = await axios.post("https://todo-notes-backend.herokuapp.com/user/login",{
+        const data = await axios.post("/user/login",{
         emailId,
         password,
         },{withCredentials: true, credentials: 'include'})
