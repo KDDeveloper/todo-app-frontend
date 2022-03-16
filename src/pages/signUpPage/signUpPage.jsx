@@ -11,7 +11,8 @@ const CONFIG = {
         Accept: 'application/json; charset=utf-8',
         'Content-Type': 'application/json',
       },
-      withCredentials:true
+      withCredentials:true,
+      credentials:'include'
     }
 
 const validateEmail = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)

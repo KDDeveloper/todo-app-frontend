@@ -10,7 +10,8 @@ const CONFIG = {
         Accept: 'application/json; charset=utf-8',
         'Content-Type': 'application/json',
       },
-      withCredentials:true
+      withCredentials:true,
+      credentials:'include'
     }
 
 function Login (props) {
