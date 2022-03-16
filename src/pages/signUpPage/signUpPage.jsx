@@ -6,6 +6,14 @@ import {useNavigate,Navigate,Link as RouterLink} from "react-router-dom"
 import {useSelector,useDispatch} from "react-redux"
 // import { adminLoginAction } from "./redux";
 
+const CONFIG = {
+    headers: {
+        Accept: 'application/json; charset=utf-8',
+        'Content-Type': 'application/json',
+      },
+      withCredentials:true
+    }
+
 const validateEmail = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
 const validatePassword = RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
 
@@ -118,7 +126,7 @@ function SignUp (props) {
              lastName,
              emailId,
              password,
-             },{withCredentials: true, credentials: 'include'})
+             },CONFIG)
              // console.log(data)
              // this.setState({login:true})
              const jwt = data.data.authToken

@@ -5,6 +5,14 @@ import {useNavigate,Navigate,Link as RouterLink} from "react-router-dom"
 import {useSelector,useDispatch} from "react-redux"
 // import { adminLoginAction } from "./redux";
 
+const CONFIG = {
+    headers: {
+        Accept: 'application/json; charset=utf-8',
+        'Content-Type': 'application/json',
+      },
+      withCredentials:true
+    }
+
 function Login (props) {
     const [emailId,setEmailId]=useState("");
     const [password,setPassword]=useState("");
@@ -22,7 +30,7 @@ function Login (props) {
         const data = await axios.post("https://todo-notes-backend.herokuapp.com/user/login",{
         emailId,
         password,
-        },{withCredentials: true, credentials: 'include'})
+        },CONFIG)
         // console.log(data)
         // this.setState({login:true})
         // const jwt = data.data.authToken
