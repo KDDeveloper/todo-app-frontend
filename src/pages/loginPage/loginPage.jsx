@@ -23,7 +23,7 @@ function Login (props) {
     // const adminLogin = useSelector(state=>state.adminLogin);
     // const dispatch = useDispatch()
     // console.log(adminLogin)
-    axios.defaults.withCredentials = true;
+    
  const login = async(e)=>{
     e.preventDefault();
     
@@ -46,7 +46,7 @@ function Login (props) {
         
     } 
     catch (err){
-            window.alert(err.response.data.error);
+            console.log(err.response)
 
         }
     
