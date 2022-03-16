@@ -46,7 +46,7 @@ function Login (props) {
         
     } 
     catch (err){
-            console.log(err.response)
+            window.alert(err.response.data.error);
 
         }
     
