@@ -112,7 +112,7 @@ function SignUp (props) {
     if(firstNameError==="" && lastNameError==="" && emailIdError==="" && passwordError==="" && confirmPasswordError===""){
         try{ 
             let {emailId,password,firstName,lastName} = formValues 
-             const data = await axios.post("/user/signup",{
+             const data = await axios.post("https://todo-notes-backend.herokuapp.com/user/signup",{
              date,
              firstName,
              lastName,

@@ -74,7 +74,7 @@ const AddTodoList = () =>{
         console.log(id);
         try {
             
-            const response = await axios.post("/todolist/create",{
+            const response = await axios.post("https://todo-notes-backend.herokuapp.com/todolist/create",{
                 date,
                 title,
                 id,
