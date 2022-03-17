@@ -61,3 +61,14 @@ html,body{
 .form-page form button:hover{
   background-color: rgb(239, 243, 0);
 }
+
+@media screen and (max-width:520px){
+  .form-page form{
+    width: 80vw;
+    min-height: 500px;
+  }
+
+  .sign-up-form form{
+    min-height: 700px;
+  }
+}
